@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+    {{#bs-form class="form-horizontal" model=this onSubmit=(action "submit") as |form|}}
+      {{#if error}}
+          {{error}}
+      {{/if}}
+      {{form.element controlType="username" label="Username" placeholder="Username" property="username"}}
+      {{form.element controlType="password" label="Password" placeholder="Password" property="password"}}
+      {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}
+    {{/bs-form}}
+  </div>
+</div>
